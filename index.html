@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiti vs Venezuela: Quality of Life + Foundation Finances (Clinton vs Trump)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .chart-container { position: relative; height: 400px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="bg-red-700 text-white py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Haiti vs Venezuela</h1>
+            <div class="text-xl">Civilian Wellness • Clinton Influence vs Trump Approach</div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Quality of Life + Financial Transparency</h2>
+            <p class="text-center text-lg max-w-2xl mx-auto">
+                Haiti under Clinton-era involvement (1994 intervention + 2010 earthquake aid/Clinton Foundation) vs. 
+                Venezuela under Trump-era policy (2017–2021 targeted sanctions for democracy). 
+                Focus: ordinary citizens' wellness + pre-involvement presidential wealth vs. foundation/org funds tied to each country.
+            </p>
+        </div>
+
+        <!-- Quality of Life Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-xl p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-center">GDP per Capita (PPP, intl $)</h3>
+                <div class="chart-container"><canvas id="gdpChart"></canvas></div>
+                <p class="text-xs text-gray-500 mt-4 text-center">Haiti: stagnant despite heavy aid. Venezuela: high base then sharp decline (root causes pre-2017 + sanctions impact).</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Human Development Index</h3>
+                <div class="chart-container"><canvas id="hdiChart"></canvas></div>
+                <p class="text-xs text-gray-500 mt-4 text-center">Haiti: minimal gains. Venezuela: peak pre-crisis then drop.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Life Expectancy (years)</h3>
+                <div class="chart-container"><canvas id="leChart"></canvas></div>
+                <p class="text-xs text-gray-500 mt-4 text-center">Haiti: slow rise. Venezuela: higher but stalled amid crisis.</p>
+            </div>
+        </div>
+
+        <!-- Financial Transparency Section (Updated with verified numbers) -->
+        <div class="mt-12 bg-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Financial Transparency: Pre-Involvement Wealth vs. Tied Foundation Funds</h2>
+            <p class="text-center text-sm max-w-3xl mx-auto mb-8 text-gray-600">
+                Pre-involvement net worth + funds raised specifically tied to Haiti (Clinton) vs. Venezuela (Trump). 
+                No evidence of personal "seizing of resources" enrichment on either side. Data from IRS 990s, official foundation reports, Forbes, NY AG.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Clinton / Haiti -->
+                <div class="border border-red-200 rounded-2xl p-6 bg-red-50">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-700">🇭🇹 Clinton Foundation / Haiti Involvement</h3>
+                    <ul class="space-y-6 text-sm">
+                        <li>
+                            <strong>Bill Clinton Pre-Involvement Wealth</strong><br>
+                            1992 (before 1994 intervention): ~$700,000 net worth.<br>
+                            By 2010 (major Haiti push): ~$55 million (from post-presidency speeches/books).
+                        </li>
+                        <li>
+                            <strong>Funds Tied to Haiti</strong><br>
+                            Clinton Foundation: over $30 million deployed directly for Haiti relief/projects since 2010 (all disbursed to aid — zero overhead taken).<br>
+                            Clinton-Bush Haiti Fund (co-led by Bill Clinton): $54.4 million raised from 2+ million donors; created thousands of job/training impacts but limited long-term GDP lift.
+                        </li>
+                        <li>
+                            <strong>Broader Context</strong><br>
+                            Total Clinton Foundation revenue since 2001: >$2 billion (Haiti a fraction). Significant growth during/after Hillary Clinton's SecState tenure (2009–2013).
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trump / Venezuela -->
+                <div class="border border-blue-200 rounded-2xl p-6 bg-blue-50">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">🇻🇪 Trump Approach / Venezuela Policy</h3>
+                    <ul class="space-y-6 text-sm">
+                        <li>
+                            <strong>Donald Trump Pre-Involvement Wealth</strong><br>
+                            2016/early 2017 (before sanctions): ~$3.5–4.5 billion (Forbes) — already a billionaire from real estate/business.
+                        </li>
+                        <li>
+                            <strong>Funds Tied to Venezuela</strong><br>
+                            Trump Foundation / any org: $0 raised or used for Venezuela policy/sanctions.<br>
+                            Trump Foundation (dissolved 2018): lifetime ~$15 million total (mostly Trump's own early donations) — unrelated to Venezuela.
+                        </li>
+                        <li>
+                            <strong>Note</strong><br>
+                            One unrelated $500k from Venezuelan state oil (Citgo) went to 2017 Inauguration Committee (not any foundation). Policy was official government sanctions on regime oil revenue to push democracy — no charitable fundraising component.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-xs text-gray-500">
+                Sources: Clinton Foundation reports / IRS 990s / Clinton-Bush Haiti Fund records ($54.4M) / Forbes net worth / NY AG Trump Foundation filings. 
+                Haiti: heavy aid + foundation activity with stagnant civilian metrics. Venezuela: targeted pressure with no parallel foundation profits.
+            </div>
+        </div>
+
+        <!-- Key Facts Sections (unchanged) -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h3 class="text-2xl font-semibold mb-6">Haiti (Clinton-Era Focus)</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><strong>1994:</strong> Intervention restores Aristide — remains poorest in hemisphere.</li>
+                    <li><strong>2009–2013 + 2010 quake:</strong> SecState role + Foundation projects (e.g., Caracol) promised big job gains; actual limited. Billions in total aid pledged.</li>
+                    <li><strong>Outcome:</strong> GDP/capita ~$2,800–3,900 PPP; HDI minimal rise (0.415 → 0.554). Persistent poverty/gangs despite involvement + funds raised.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h3 class="text-2xl font-semibold mb-6">Venezuela (Trump-Era Focus)</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><strong>Pre-2017:</strong> Crisis deep under Maduro (mismanagement/hyperinflation).</li>
+                    <li><strong>2017–2021:</strong> Targeted sanctions + Guaidó recognition to restore democracy.</li>
+                    <li><strong>Outcome:</strong> Sharp economic contraction (root causes pre-sanctions). HDI drop then slight rebound. No foundation fundraising tied to policy.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center text-xs text-gray-500">
+            This site supports the project: contrasting Trump foreign policy (targeted pressure for democracy) vs. Clinton/Obama/Bush/RINO-style approaches (aid/intervention) on real civilian wellness + financial flows.
+            <br><br>
+            Share link once hosted: https://yourusername.github.io/haiti-venezuela-comparison
+        </div>
+    </div>
+
+    <script>
+        // GDP Chart
+        new Chart(document.getElementById('gdpChart'), {
+            type: 'line',
+            data: {
+                labels: ['1990','2000','2010','2013','2014','2017','2019','2020','2022','2023'],
+                datasets: [{
+                    label: 'Haiti',
+                    data: [3946, 3100, 2900, 3050, 3100, 3000, 2950, 2800, 2900, 2956],
+                    borderColor: '#ef4444',
+                    tension: 0.4
+                }, {
+                    label: 'Venezuela',
+                    data: [11000, 14000, 16000, 18100, 18102, 12000, 8000, 6000, 7000, 8500],
+                    borderColor: '#1e40af',
+                    tension: 0.4
+                }]
+            },
+            options: { plugins: { legend: { position: 'top' } }, scales: { y: { beginAtZero: true } } }
+        });
+
+        // HDI Chart
+        new Chart(document.getElementById('hdiChart'), {
+            type: 'line',
+            data: {
+                labels: ['1990','2000','2010','2013','2017','2019','2022','2023'],
+                datasets: [{
+                    label: 'Haiti',
+                    data: [0.42, 0.45, 0.449, 0.54, 0.557, 0.559, 0.552, 0.554],
+                    borderColor: '#ef4444',
+                    tension: 0.4
+                }, {
+                    label: 'Venezuela',
+                    data: [0.638, 0.69, 0.759, 0.777, 0.750, 0.720, 0.699, 0.709],
+                    borderColor: '#1e40af',
+                    tension: 0.4
+                }]
+            },
+            options: { plugins: { legend: { position: 'top' } }, scales: { y: { min: 0, max: 0.8 } } }
+        });
+
+        // Life Expectancy
+        new Chart(document.getElementById('leChart'), {
+            type: 'line',
+            data: {
+                labels: ['1990','2000','2010','2017','2019','2022','2023'],
+                datasets: [{
+                    label: 'Haiti',
+                    data: [53.2, 58.2, 62.5, 64.0, 65.0, 65.5, 66.0],
+                    borderColor: '#ef4444',
+                    tension: 0.4
+                }, {
+                    label: 'Venezuela',
+                    data: [70.5, 72.5, 73.5, 72.0, 72.5, 72.6, 72.7],
+                    borderColor: '#1e40af',
+                    tension: 0.4
+                }]
+            },
+            options: { plugins: { legend: { position: 'top' } }, scales: { y: { min: 50, max: 80 } } }
+        });
+    </script>
+</body>
+</html>
