@@ -1,0 +1,1 @@
+Compare real civilian outcomes in Haiti (post-Clinton involvement + foundation funds) vs Venezuela (post-Trump policy). Quality of life metrics + financial transparency side-by-side. No spin — just data.
